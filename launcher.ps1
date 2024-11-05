@@ -3,8 +3,7 @@ $scriptUrl = "https://raw.githubusercontent.com/thenPie/win10-postinstall/main/R
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')
 
 if (-not $isAdmin) {
-    Write-Host "`nRequesting admin rights..." -ForegroundColor Yellow
-    Start-Sleep -Seconds 1
+    Write-Host "`nRequesting administrative privileges..." -ForegroundColor Yellow
     Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iwr -useb $scriptUrl | iex`"" -Verb RunAs
 }
 else {
