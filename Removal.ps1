@@ -1,29 +1,5 @@
 Clear-Host
-
 Start-Sleep -Milliseconds 500
-
-# Self-elevate the script if required
-$currentUser = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
-$isAdmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-
-if (-not $isAdmin) {
-    try {
-        $processStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $processStartInfo.FileName = "powershell.exe"
-        $processStartInfo.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
-        $processStartInfo.Verb = "RunAs"
-        $processStartInfo.UseShellExecute = $true
-        
-        [System.Diagnostics.Process]::Start($processStartInfo)
-    }
-    catch {
-        Write-Host "`nFailed to elevate privileges. Please run as Administrator." -ForegroundColor Red
-        Write-Host "Error: $_" -ForegroundColor Red
-        Write-Host "`nPress any key to exit..."
-        $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
-    }
-    exit
-}
 
 Write-Host "Windows 10 App Removal Script" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
