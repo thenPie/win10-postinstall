@@ -1,5 +1,10 @@
-$command = @"
-irm https://raw.githubusercontent.com/thenPie/win10-postinstall/refs/heads/main/Removal.ps1 | iex
-"@
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')
+$scriptUrl = "https://raw.githubusercontent.com/thenPie/win10-postinstall/refs/heads/main/Removal.ps1"
 
-Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command $command" -Verb RunAs
+if ($isAdmin) {
+    irm $scriptUrl | iex
+}
+else {
+    $command = "irm $scriptUrl | iex"
+    Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command $command" -Verb RunAs
+}
