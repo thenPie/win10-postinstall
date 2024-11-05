@@ -14,6 +14,11 @@ irm https://raw.githubusercontent.com/thenPie/win10-postinstall/main/launcher.ps
 ## Apps Removed
 
 The script removes the following Windows 10 apps:
+- Microsoft.Microsoft3DViewer (3D Viewer)
+- Microsoft.MixedReality.Portal (Mixed Reality)
+- Microsoft.Office.OneNote (OneNote)
+- Microsoft.MSPaint (Paint 3D)
+- Microsoft.SkypeApp (Skype)
 - Microsoft.WindowsCamera (Camera app)
 - Microsoft.WindowsTerminal (Windows Terminal)
 - MicrosoftWindows.Client.WebExperience (Widgets)
