@@ -1,7 +1,7 @@
 # win10-postinstall
 A PowerShell script for Windows 10 post-installation bloatware removal of certain apps
 
-Targeted for Windows 10 19045.5073 (22H2).
+Tested on Windows 10 Pro 19045.5073 (22H2).
 
 ## Usage
 
