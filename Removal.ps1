@@ -11,6 +11,8 @@ Function Process-BloatwareApps {
     )
 
     $AppsToRemove = @(
+        "Microsoft.Microsoft3DViewer"
+        "Microsoft.MixedReality.Portal"
         "Microsoft.Office.OneNote"
         "Microsoft.MSPaint"
         "Microsoft.SkypeApp"
