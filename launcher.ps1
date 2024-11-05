@@ -1,4 +1,5 @@
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')
+
 $scriptUrl = "https://raw.githubusercontent.com/thenPie/win10-postinstall/refs/heads/main/Removal.ps1"
 
 if ($isAdmin) {
