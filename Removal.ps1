@@ -11,6 +11,9 @@ Function Process-BloatwareApps {
     )
 
     $AppsToRemove = @(
+        "Microsoft.Office.OneNote"
+        "Microsoft.MSPaint"
+        "Microsoft.SkypeApp"
         "Microsoft.WindowsCamera"
         "Microsoft.WindowsTerminal"
         "MicrosoftWindows.Client.WebExperience"
