@@ -23,7 +23,6 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     Exit
 }
 
-Write-Host "\n"
 Write-Host "Windows 10 App Removal Script" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 
