@@ -5,16 +5,15 @@ Start-Sleep -Milliseconds 500
 # Self-elevate the script if required
 if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
     try {
-        $CommandLine = "-File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
-        Start-Process -FilePath PowerShell.exe -Verb RunAs -ArgumentList $CommandLine
+        $argList = "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+        Start-Process -FilePath "powershell.exe" -Verb RunAs -ArgumentList $argList -Wait
     }
     catch {
         Write-Host "`nFailed to elevate privileges. Please run as Administrator." -ForegroundColor Red
         Write-Host "Press any key to exit..."
         $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
-        return
     }
-    exit
+    return
 }
 
 # Check if running as admin
@@ -155,3 +154,7 @@ Function Show-Menu {
 
 # Run the menu
 Show-Menu
+
+# Keep console open at the end
+Write-Host "`nPress any key to exit..."
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
