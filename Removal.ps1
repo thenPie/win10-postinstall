@@ -71,7 +71,7 @@ Function Process-BloatwareApps {
             } else {
                 Write-Host "Attempting to remove: $AppToRemove" -ForegroundColor Yellow
                 try {
-                    Get-AppxPackage -AllUsers -Name $AppToRemove | Remove-AppxPackage -AllUsers -ErrorAction Stop
+                    Get-AppxPackage -AllUsers -Name $AppToRemove | Remove-AppxPackage -ErrorAction Stop
                     Get-AppxProvisionedPackage -Online | 
                         Where-Object {$_.DisplayName -eq $AppToRemove} | 
                         Remove-AppxProvisionedPackage -Online -ErrorAction Stop
