@@ -17,7 +17,6 @@ Function Process-BloatwareApps {
         "Microsoft.MSPaint"
         "Microsoft.SkypeApp"
         "Microsoft.WindowsCamera"
-        "Microsoft.WindowsTerminal"
         "MicrosoftWindows.Client.WebExperience"
         "Microsoft.WindowsAlarms"
         "Microsoft.WindowsMaps"
