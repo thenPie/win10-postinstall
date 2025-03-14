@@ -1,5 +1,3 @@
-Microsoft.Services.Store.Engagement*
-Microsoft.Advertising*
 Microsoft.549981C3F5F10*
 Microsoft.WindowsCamera*
 Microsoft.WindowsAlarms*
