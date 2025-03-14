@@ -1,7 +1,7 @@
 $appxs = [System.Collections.Generic.List[string]]::new()
 
-$appxs.Add("Microsoft.Services.Store.Engagement*")
-$appxs.Add("Microsoft.Advertising*")
+# $appxs.Add("Microsoft.Services.Store.Engagement*")
+# $appxs.Add("Microsoft.Advertising*")
 $appxs.Add("Microsoft.549981C3F5F10*")
 $appxs.Add("Microsoft.WindowsCamera*")
 $appxs.Add("Microsoft.WindowsAlarms*")
