@@ -1,5 +1,3 @@
-# $appxs = Get-Content -Path '.\to_delete_appxs.txt'
-
 $appxs = [System.Collections.Generic.List[string]]::new()
 
 $appxs.Add("Microsoft.Services.Store.Engagement*")
