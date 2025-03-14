@@ -1,4 +1,4 @@
-$scriptUrl = "https://raw.githubusercontent.com/thenPie/win10-postinstall/main/Removal.ps1"
+$scriptUrl = "https://raw.githubusercontent.com/thenPie/win10-postinstall/main/src/Removal.ps1"
 
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')
 
