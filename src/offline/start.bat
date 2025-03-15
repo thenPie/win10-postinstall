@@ -63,7 +63,7 @@
  ::::::::::::::::::::::::::::
  ::START
  ::::::::::::::::::::::::::::
-powershell set-executionpolicy remotesigned
+powershell set-executionpolicy bypass
 powershell .\removal_offline.ps1
 powershell .\winutil.ps1
 powershell set-executionpolicy restricted
