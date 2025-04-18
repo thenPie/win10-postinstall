@@ -15,7 +15,6 @@ Microsoft.WindowsCamera_2022.2312.3.0_neutral_~_8wekyb3d8bbwe
 Microsoft.WindowsFeedbackHub_2024.125.1522.0_neutral_~_8wekyb3d8bbwe
 Microsoft.WindowsSoundRecorder_2021.2312.5.0_neutral_~_8wekyb3d8bbwe
 Microsoft.YourPhone_1.24012.105.0_neutral_~_8wekyb3d8bbwe
-Microsoft.ZuneMusic_11.2312.8.0_neutral_~_8wekyb3d8bbwe
 MicrosoftCorporationII.QuickAssist_2024.309.159.0_neutral_~_8wekyb3d8bbwe
 MicrosoftWindows.CrossDevice_1.23101.22.0_neutral_~_cw5n1h2txyewy
 MSTeams_1.0.0.0_x64__8wekyb3d8bbwe
